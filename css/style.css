@@ -1,0 +1,141 @@
+/*Fonts*/
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans-Bold.woff") format("woff"),
+    url("../fonts/PTSans-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url("../fonts/PTSans.woff") format("woff"),
+    url("../fonts/PTSans.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Variables*/
+
+:root {
+    --basic-white: #ffffff;
+    --basic-light-blue: #81b3d2;
+    --basic-light-grey: #eeeeee;
+    --basic-light-brown: #766357;
+    --basic-black:#000000;
+
+}
+/*Global*/
+
+body{
+    font-family: "PT Sans";
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--basic-white);   
+    background-position: top-center;
+    background-repeat: no repeat;
+}
+
+a{
+    text-decoration:none;
+}
+img{
+    max-width: 100%;
+    height:auto
+}
+
+/*Main navigation*/
+
+.main-navigation{
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    background-color: var(--basic-white)
+}
+
+.main-navigation-wrapper {
+    background-color: var(--basic-white);
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+.site-navigation-current a:not([href]){
+    background-color: var(--basic-white);
+}
+
+/*User navigation*/
+
+.site-navigation a,
+.user-navigation a {
+    color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+    background-color: var(--basic-white);
+}
+
+/*Features*/
+
+.features-list {
+    list-style: none;
+}
+
+.features-item {
+    text-align:center;
+}
+
+.features-item h2 {
+    font-size: 21px;
+    line-height: 26px;
+}
+
+/*Main footer*/
+
+.main-footer {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.footer-contacts a{
+    color: var(--basic-black);
+    text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+    text-decoration: none;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+/*Social-button*/
+
+.social-button {
+    color: inherit;
+}
+
+.social-button:hover,
+.social-button:focus {
+    background-color: var(--basic-light-blue);
+}
+
+.footer-copyright .button:hover,
+.footer-copyright .button:focus {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
