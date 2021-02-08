@@ -49,12 +49,28 @@ img{
 }
 
 /*Main navigation*/
+/*ul li {
+    display: inline;
+
+}*/
+
+.headbackground{
+    background-image: url(../img/background.sedona.jpg);
+    width: 1200px;
+    height: 509px;
+    text-align: center;
+}
+.headbackground2{
+    margin-top: -57px;
+}
 
 .main-navigation{
     font-size: 14px;
     line-height: 26px;
+    font-weight: 700;
     color: var(--basic-black);
-    background-color: var(--basic-white)
+    background-color: var(--basic-white);
+    text-align: center;
 }
 
 .main-navigation-wrapper {
@@ -63,6 +79,7 @@ img{
 
 .site-navigation {
     list-style: none;
+    text-align: center;
 }
 
 .site-navigation-current a:not([href]){
@@ -90,10 +107,42 @@ img{
 .features-item {
     text-align:center;
 }
-
+.blueback {
+    background-color: var(--basic-light-blue);
+}
+.whiteback {
+    background-color: var(--basic-white);
+}
 .features-item h2 {
     font-size: 21px;
     line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+
+}
+.features-item h2 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.greyback {
+    background-color: var(--basic-light-grey);
+}
+
+
+.hotel-search-button {
+    color: var(--basic-white);
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 568px;
+    height: 86;
+    text-align: center ;
+    background-color: var(--basic-light-brown);
 }
 
 /*Main footer*/
