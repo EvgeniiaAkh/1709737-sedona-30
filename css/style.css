@@ -24,11 +24,13 @@
     --basic-light-grey: #eeeeee;
     --basic-light-brown: #766357;
     --basic-black:#000000;
+    --basic-brown: #f2f2f2;
+
 
 }
 /*Global*/
 
-body{
+.page-body{
     font-family: "PT Sans";
     font-size: 21px;
     line-height: 26px;
@@ -38,6 +40,14 @@ body{
     background-color: var(--basic-white);
     background-position: top-center;
     background-repeat: no repeat;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: center;
+    margin: 0;
+    max-width: 1200px;
+    padding: 0;
+
 }
 
 a{
@@ -48,38 +58,71 @@ img{
     height:auto
 }
 
-/*Main navigation*/
-/*ul li {
-    display: inline;
-
-}*/
-
 .headbackground{
     background-image: url(../img/background.sedona.jpg);
     width: 1200px;
     height: 509px;
     text-align: center;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+
 }
-.headbackground2{
-    margin-top: -57px;
+
+.headbackground2::after {
+    content: " ";
+    background-image: url(../img/mask.png);
+    display: block;
+    width: 100%;
+    height: 57px;
+    position:absolute;
+
+}
+
+.headbackground2::before {
+    content: " ";
+    background-image: url(../img/welcome.svg);
+    background-size: cover;
+    background-position: center;
 }
 
 .main-navigation{
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
+    height: 35px;
     color: var(--basic-black);
     background-color: var(--basic-white);
     text-align: center;
+    display: grid;
+    background-image: url(../img/logo.svg);
+    background-position: center;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 85px;
+}
+
+.inner-page .main-navigation{
+    align-items: flex-start;
+    flex-direction: row;
 }
 
 .main-navigation-wrapper {
     background-color: var(--basic-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .site-navigation {
     list-style: none;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.head-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .site-navigation-current a:not([href]){
@@ -100,6 +143,11 @@ img{
 
 /*Features*/
 
+.text-center {
+    background-position: top-center;
+    text-align: center;
+}
+
 .features-list {
     list-style: none;
 }
@@ -109,29 +157,70 @@ img{
 }
 .blueback {
     background-color: var(--basic-light-blue);
+    color: var(--basic-white);
+
 }
 .whiteback {
     background-color: var(--basic-white);
 }
-.features-item h2 {
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    text-align: center;
-
-}
-.features-item h2 {
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    text-align: center;
-
-}
-
 .greyback {
     background-color: var(--basic-light-grey);
+    width: 100%;
+    height: 100%;
 }
 
+.flexcolumn{
+    display: flex;
+    flex-direction: column ;
+    align-content: space-between;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row ;
+    align-content: space-between;
+}
+
+.features-item h2 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+
+}
+.features-item h2 {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.infrastructure {
+
+}
+
+.block {
+    padding: 82px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 1200px;
+    height: 151px;
+}
+
+.found {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+}
+
+.search {
+    text-align: center;
+    background-image: url(../img/map.svg);
+    width: 1199px;
+    height: 594px;
+}
 
 .hotel-search-button {
     color: var(--basic-white);
@@ -152,9 +241,14 @@ img{
     background-color: var(--basic-white);
     background-position: 0 0;
     background-repeat: repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1200px;
+    height: 120px;
 }
 
-.footer-contacts a{
+.footer-contacts a {
     color: var(--basic-black);
     text-decoration: underline;
 }
@@ -164,18 +258,19 @@ img{
     text-decoration: none;
 }
 
-.footer-social {
-    text-align: center;
-}
-
-.footer-social ul {
+.footer-social ul{
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /*Social-button*/
 
 .social-button {
     color: inherit;
+    display: flex;
+    flex-direction: row;
 }
 
 .social-button:hover,
